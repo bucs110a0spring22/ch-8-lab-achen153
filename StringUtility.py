@@ -56,11 +56,11 @@ def cipher(self):
   shift = len(self.string)
   for i in self.string:
     if i in alpha:
-      char = chr(order(i)+shift)
+      char = chr(ord(i)+shift)
       if ord(char) >=91:
         while ord(char) >= 91 and i.isupper():
           char = chr(ord(char) - 26)
-        while ord(char_ >= 123 and i.islower()):
+        while ord(char) >= 123 and i.islower():
           char = chr(ord(char) - 26)
       else: 
         char = i
